@@ -1,0 +1,278 @@
+/* Modern Todo App Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.todoContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.todoContainer h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 32px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.iptTodo {
+  margin-bottom: 24px;
+}
+
+#todotext {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+#todotext:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  background: white;
+}
+
+#todotext::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.addTodoBtn {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.addTodoBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+}
+
+.addTodoBtn:active {
+  transform: translateY(0);
+}
+
+ul {
+  list-style: none;
+  margin: 24px 0;
+}
+
+li {
+  background: white;
+  margin: 12px 0;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #e2e8f0;
+}
+
+li span {
+  flex: 1;
+  font-size: 16px;
+  color: #2d3748;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+li button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Mark as Done / Doned button */
+li span button:first-of-type {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  box-shadow: 0 2px 8px rgba(72, 187, 120, 0.3);
+}
+
+li span button:first-of-type:hover {
+  background: linear-gradient(135deg, #38a169, #2f855a);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+}
+
+/* Delete button */
+.deleteTodo {
+  background: linear-gradient(135deg, #f56565, #e53e3e) !important;
+  color: white !important;
+  padding: 10px 12px !important;
+  box-shadow: 0 2px 8px rgba(245, 101, 101, 0.3);
+}
+
+.deleteTodo:hover {
+  background: linear-gradient(135deg, #e53e3e, #c53030) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+}
+
+.deleteTodo i {
+  font-size: 14px;
+}
+
+/* Uppercase button */
+li button:last-child {
+  background: linear-gradient(135deg, #ed8936, #dd6b20);
+  color: white;
+  box-shadow: 0 2px 8px rgba(237, 137, 54, 0.3);
+}
+
+li button:last-child:hover {
+  background: linear-gradient(135deg, #dd6b20, #c05621);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(237, 137, 54, 0.4);
+}
+
+/* Mark All As Done button */
+.todoContainer > button:last-child {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #9f7aea, #805ad5);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(159, 122, 234, 0.3);
+}
+
+.todoContainer > button:last-child:hover {
+  background: linear-gradient(135deg, #805ad5, #6b46c1);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(159, 122, 234, 0.4);
+}
+
+.todoContainer > button:last-child:active {
+  transform: translateY(0);
+}
+
+/* Completed todo styling */
+li[style*="line-through"] {
+  opacity: 0.7;
+  background: #f7fafc;
+}
+
+li[style*="line-through"] span {
+  color: #718096;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  body {
+    padding: 10px;
+  }
+  
+  .todoContainer {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  
+  .todoContainer h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  
+  li {
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  li span {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  li button {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Animation for new todos */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Focus visible for accessibility */
+button:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+#todotext:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
